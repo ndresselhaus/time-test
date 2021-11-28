@@ -27,12 +27,20 @@
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:utc": "TZ=UTC jest",
+    "test:pacific": "TZ=America/Los_Angeles jest"
   },
   "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "@js-temporal/polyfill": "^0.2.0",
+    "@types/luxon": "^2.0.7",
+    "date-fns": "^2.26.0",
+    "date-fns-tz": "^1.1.6",
+    "luxon": "^2.1.1",
+    "mockdate": "^3.0.5",
     "tslib": "~2.3.1"
   },
   "volta": {
